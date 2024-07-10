@@ -38,8 +38,8 @@ function createTaskCard(task) {
     newDate.text(task.dueDate)
     
     let newDesc = $("<p>");
-    newDate.addClass("card-text");
-    newDate.text(task.description)
+    newDesc.addClass("card-text");
+    newDesc.text(task.description)
 
     let newBtn = $("<button>");
     newBtn.addClass("btn btn-danger delete");

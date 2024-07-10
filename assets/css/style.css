@@ -45,7 +45,7 @@ body {
   cursor: grab;
 }
 
-/* style project rows based on status (late, due today) */
+/* style task rows based on status (late, due today) */
 .task-late {
   background-color: var(--lightred);
 }
