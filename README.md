@@ -8,3 +8,5 @@ https://tjjohnson76.github.io/hw05-Third-Party-APIs/
 
 ## Screenshot of Deployed Version
 
+![example of the modal](./assets/hw05_1.png)
+![task page depicting each case](./assets/hw05_2.png)
