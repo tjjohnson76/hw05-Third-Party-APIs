@@ -134,10 +134,6 @@ function handleAddTask(){
 
     renderTaskList();
 
-    // $("#formModal").find('#task-name-input').val("");
-    // $("#formModal").find('#task-due-date').val("");
-    // $("#formModal").find('#task-description').val("");
-
 }
 
 // Todo: create a function to handle deleting a task
