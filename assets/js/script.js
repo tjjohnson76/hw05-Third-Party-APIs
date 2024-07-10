@@ -115,6 +115,8 @@ function renderTaskList() {
 // Todo: create a function to handle adding a new task
 function handleAddTask(){
 
+    let tasks = readTasksFromStorage();
+
     let taskName = $("#task-name-input").val();
     let taskDate = $("#task-due-date").val();
     let taskDesc = $("#task-description").val();
@@ -128,16 +130,17 @@ function handleAddTask(){
         status: "to-do"
     };
 
-    taskList.push(newTask);
+    tasks.push(newTask);
 
-    saveTasksToStorage(taskList);
+    saveTasksToStorage(tasks);
 
     renderTaskList();
 
 }
 
 // Todo: create a function to handle deleting a task
-function handleDeleteTask(event){
+function handleDeleteTask(){
+
     const taskId = $(this).attr('data-task-id');
     const tasks = readTasksFromStorage();
 
@@ -156,7 +159,7 @@ function handleDeleteTask(event){
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
-    const tasks = taskList;
+    const tasks = readTasksFromStorage();
 
     const taskIdent = ui.draggable[0].dataset.taskId
 
@@ -168,7 +171,7 @@ function handleDrop(event, ui) {
         }
     }
 
-    saveTasksToStorage(taskList);
+    saveTasksToStorage(tasks);
     renderTaskList();
 }
 
