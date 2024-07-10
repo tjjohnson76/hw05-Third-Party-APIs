@@ -25,6 +25,56 @@
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
     <!-- Todo: Create a modal with a form to add tasks -->
+
+    <!-- modal example taken from  https://getbootstrap.com/docs/4.0/components/modal/
+     Modified to fit this assignment-->
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <div id="title-and-date">
+              <input
+                id="task-name-input"
+                type="text"
+                placeholder="Title"
+                class="form-control"
+                aria-label="Title"
+              />
+              <input
+                id="task-due-date"
+                placeholder="Task Due Date"
+                autocomplete="off"
+                type="text"
+                class="form-control mb-3"
+              />
+            </div>
+
+            <textarea
+              class="form-control mb-3"
+              id="task-description"
+              placeholder="Description"
+            ></textarea>
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Add Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">

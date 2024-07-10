@@ -36,10 +36,10 @@ function handleDrop(event, ui) {
 $(document).ready(function () {
     console.log("ready")
   // ? Print project data to the screen on page load if there is any
-  printProjectData();
+//   printProjectData();
 
     //need to change #taskDueDate to modal datepicker
-  $('#taskDueDate').datepicker({
+  $('#task-due-date').datepicker({
     changeMonth: true,
     changeYear: true,
   });
@@ -49,4 +49,13 @@ $(document).ready(function () {
     accept: '.draggable',
     drop: handleDrop,
   });
+
+  $('#formModal').on('hidden.bs.modal', function () {
+    $(this).find('#task-name-input').val("");
+    $(this).find('#task-due-date').val("");
+    $(this).find('#task-description').val("");
+
+})
+
 });
+
